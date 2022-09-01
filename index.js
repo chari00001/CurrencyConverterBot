@@ -4,6 +4,7 @@ const BOT_TOKEN = '5445644910:AAExPi_OE5toacTsGM_3pervXB9GFJGtXj4'
 const apiKey = 'q1h9N0XoMQJoHL282H6tyz3t7vUfxyYI'
 const baseURL = `https://api.apilayer.com/fixer/convert?apikey=${apiKey}`
 const symbolsURL = `https://api.apilayer.com/fixer/symbols?apikey=${apiKey}`
+const { createServer } from "http";
 
 /**
  * PARAMETERS: 
@@ -63,7 +64,8 @@ bot.command('symbols', ctx => {
     })
 })
 
-bot.launch({ webhook: { domain: 'https://git.heroku.com/curr-converter-bot-chari.git', port: process.env.port } })
+// bot.launch({ webhook: { domain: 'https://git.heroku.com/curr-converter-bot-chari.git', port: process.env.port } })
+createServer(await bot.createWebhook({ domain: "https://git.heroku.com/curr-converter-bot-chari.git" })).listen(3000);
 
 process.once("SIGINT", () => bot.stop("SIGINT"));
 process.once("SIGTERM", () => bot.stop("SIGTERM"));
