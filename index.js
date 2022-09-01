@@ -64,7 +64,8 @@ bot.command('symbols', ctx => {
     })
 })
 
-bot.launch({ webhook: { domain: 'git.heroku.com/curr-converter-bot-chari.git', port: process.env.port } })
+// bot.launch({ webhook: { domain: 'git.heroku.com/curr-converter-bot-chari.git', port: process.env.port } })
+bot.launch()
 
 process.once("SIGINT", () => bot.stop("SIGINT"));
 process.once("SIGTERM", () => bot.stop("SIGTERM"));
