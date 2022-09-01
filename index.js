@@ -65,7 +65,7 @@ bot.command('symbols', ctx => {
 })
 
 // bot.launch({ webhook: { domain: 'https://git.heroku.com/curr-converter-bot-chari.git', port: process.env.port } })
-createServer(await bot.createWebhook({ domain: "https://git.heroku.com/curr-converter-bot-chari.git" })).listen(3000);
+createServer(await bot.createWebhook({ domain: "https://git.heroku.com/curr-converter-bot-chari.git" })).listen(process.env.PORT);
 
 process.once("SIGINT", () => bot.stop("SIGINT"));
 process.once("SIGTERM", () => bot.stop("SIGTERM"));
