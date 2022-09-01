@@ -4,7 +4,6 @@ const BOT_TOKEN = '5445644910:AAExPi_OE5toacTsGM_3pervXB9GFJGtXj4'
 const apiKey = 'q1h9N0XoMQJoHL282H6tyz3t7vUfxyYI'
 const baseURL = `https://api.apilayer.com/fixer/convert?apikey=${apiKey}`
 const symbolsURL = `https://api.apilayer.com/fixer/symbols?apikey=${apiKey}`
-const { createServer } from "http";
 
 /**
  * PARAMETERS: 
